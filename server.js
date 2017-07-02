@@ -56,7 +56,14 @@ app.get('/about',(req,res)=>{
     });
     
 });
-
+app.get('/pointstable',(req,res)=>{
+  //  res.send('about Page');
+    res.render('pointstable.hbs',{
+        pageTitle:'Points table',
+      
+    });
+    
+});
 app.get('/projects',(req, res)=>{
          res.render('projects.hbs',{
           pageTitle: 'Projects',
