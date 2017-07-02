@@ -6,13 +6,9 @@
         <title>Help Page</title>
      
        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-       <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-       <link rel="stylesheet" href="http://mottie.github.io/tablesorter/css/theme.default.css">
-       <link rel="stylesheet" href="http://mottie.github.io/tablesorter/css/theme.blue.css">
+       <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">  
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">     
 
-        <script src="https://mottie.github.io/tablesorter/js/jquery.tablesorter.widgets.js"></script>
-        <script src="https://mottie.github.io/tablesorter/js/jquery.tablesorter.js"></script>
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -82,7 +78,8 @@
      color: #52BE80  ;
  }
  .styleteamplayers {
-     color: darkorchid;
+    color: #1C88AB;
+    font-size: 18px;
  }
  .roundedCorners {
      border: #777 1px solid;
@@ -156,6 +153,7 @@
      padding: 14px 16px;
      text-decoration: none;
      font-size: 17px;
+     font-weight:400
  }
  .topnav a:hover {
      background-color: #ddd;
@@ -165,6 +163,13 @@
      background-color: #71C965;
      color: white;
  }
+           
+           .style_teamplayer{
+               background-color:#F46833;
+               border-style:none;
+              border: 1px solid white;
+              color: white;
+           }           
 </style>
 
          <script>
@@ -282,29 +287,25 @@ $('table').tablesorter({
 <!--   header menu section-->
 <div class="topnav">
 
-    <div id="homeall"> <a class="active" href="#home">Home </a>
-    </div>
-    <div id="pointstable"> <a href="#e">Points Table </a> </div>
-    <div id="matchschedule"> <a href="#schedule">Match schedule</a>
-    </div>
-    <div id="teamplayers"> <a href="#schedule">Teams</a>
-    </div>
-    <div id="bestplayers"><a href="#Teams">Best players </a> </div>
-    <div id="contactus"><a href="#contactus">Contact us</a>
-    </div>
+    <div id="homeall"> <a class="active" href="#home">Home | </a>    </div>
+    <div id="pointstable"> <a href="#e">Points Table |</a> </div>
+    <div id="matchschedule"> <a href="#schedule">Match schedule |</a>    </div>
+    <div id="teamplayers"> <a href="#schedule">Teams |</a>    </div>
+    <div id="bestplayers"><a href="#Teams">Best players |</a> </div>
+    <div id="contactus"><a href="#contactus">Contact us </a>    </div>
     <!--    <a href="#aboutus">About us</a> -->
 </div>
 <p><a href="https://www.google.com/">Cricket tournament page </a> </p>
 <div style="align:center">
-    <img src="/cric1.jpg" width="380" height="345">
-    <img src="/cric5.jpg" width="380" height="345">
-    <img src="/cric4.jpg" width="410" height="345">
+    <img src="/images/cric1.jpg" width="380" height="345">
+    <img src="/images/cric5.jpg" width="380" height="345">
+    <img src="/images/cric4.jpg" width="410" height="345">
     <!--        <img src="/cric2.jpg" width="358" height="345"> -->
 </div>
 <!--     scrollable content section   -->
 <marquee>
     <p style="color:orange">Latest Matchs Results Update:-</p>
-    <div style="background-color:red;color:white;font-size:14pxpadding:10px 10px 10px 10px">Lions team won by 20 runs | Friends team lost by 2 wickets | Sandy team won by 10 runs | Nutmeg team won by 3 wickets | trinath team won by 4 wickets </div>
+    <div style="background-color:#F24A4A ;color:white;font-size:14pxpadding:10px 10px 10px 10px">   Lions team won by 20 runs | Friends team lost by 2 wickets | Sandy team won by 10 runs | Nutmeg team won by 3 wickets | trinath team won by 4 wickets </div>
 
 </marquee>
 <!--  pointstable section   -->
@@ -457,7 +458,7 @@ $('table').tablesorter({
 
     <div id="tabs">
         <ul>
-            <li><a href="#tabs-1">Top batsman</a>
+            <li ><a href="#tabs-1">Top batsman</a>
             </li>
             <li><a href="#tabs-2">Top bowler</a>
             </li>
@@ -482,7 +483,7 @@ $('table').tablesorter({
     <h2>Teams & Players Tournament</h2>
     <div style="max-width:1200px;height:auto;width:auto">
         <div id="accordion" style="width:600px;float:left">
-            <h3>Team 1</h3>
+            <h3 class="style_teamplayer">Team 1</h3>
             <div style="height:270px">
                 <ul class="styleteamplayers">
                     <li>Ravi</li>
@@ -501,7 +502,7 @@ $('table').tablesorter({
                     About team and other stuff
                 </p>
             </div>
-            <h3>Team 2</h3>
+            <h3 class="style_teamplayer">Team 2</h3>
             <div>
                 <ul class="styleteamplayers">
                     <li>Ravi (captain)</li>
@@ -517,7 +518,7 @@ $('table').tablesorter({
                     <li>naveen</li>
                 </ul>
             </div>
-            <h3>Team 3</h3>
+            <h3 class="style_teamplayer">Team 3</h3>
             <div>
                 <p>
                     Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
@@ -537,7 +538,7 @@ $('table').tablesorter({
                 </ul>
 
             </div>
-            <h3>Team 4</h3>
+            <h3 class="style_teamplayer">Team 4</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -545,7 +546,7 @@ $('table').tablesorter({
                     <li>List item three</li>
                 </ul>
             </div>
-            <h3>Team 5</h3>
+            <h3 class="style_teamplayer">Team 5</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -553,7 +554,7 @@ $('table').tablesorter({
                     <li>List item three</li>
                 </ul>
             </div>
-            <h3>Team 6</h3>
+            <h3 class="style_teamplayer">Team 6</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -561,7 +562,7 @@ $('table').tablesorter({
                     <li>List item three</li>
                 </ul>
             </div>
-            <h3>Team 7</h3>
+            <h3 class="style_teamplayer">Team 7</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -569,7 +570,7 @@ $('table').tablesorter({
                     <li>List item three</li>
                 </ul>
             </div>
-            <h3>Team 8</h3>
+            <h3 class="style_teamplayer">Team 8</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -577,7 +578,7 @@ $('table').tablesorter({
                     <li>List item three</li>
                 </ul>
             </div>
-            <h3>Team 9</h3>
+            <h3 class="style_teamplayer">Team 9</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -585,7 +586,7 @@ $('table').tablesorter({
                     <li>List item three</li>
                 </ul>
             </div>
-            <h3>Team 10</h3>
+            <h3 class="style_teamplayer">Team 10</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -593,7 +594,7 @@ $('table').tablesorter({
                     <li>List item three</li>
                 </ul>
             </div>
-            <h3>Team 11</h3>
+            <h3 class="style_teamplayer">Team 11</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -603,8 +604,8 @@ $('table').tablesorter({
 
             </div>
         </div>
-        <div id="accordion1" style="width:600px;float:right">
-            <h3>Team 12</h3>
+        <div id="accordion1"  style="width:600px;float:right">
+            <h3 class="style_teamplayer">Team 12</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -612,7 +613,7 @@ $('table').tablesorter({
                     <li>List item three</li>
                 </ul>
             </div>
-            <h3>Team 13</h3>
+            <h3 class="style_teamplayer">Team 13</h3>
             <div>
                 <p>
                     Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
@@ -624,7 +625,7 @@ $('table').tablesorter({
                 </ul>
 
             </div>
-            <h3>Team 14</h3>
+            <h3 class="style_teamplayer">Team 14</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -632,7 +633,7 @@ $('table').tablesorter({
                     <li>List item three</li>
                 </ul>
             </div>
-            <h3>Team 15</h3>
+            <h3 class="style_teamplayer">Team 15</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -640,7 +641,7 @@ $('table').tablesorter({
                     <li>List item three</li>
                 </ul>
             </div>
-            <h3>Team 16</h3>
+            <h3 class="style_teamplayer">Team 16</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -648,7 +649,7 @@ $('table').tablesorter({
                     <li>List item three</li>
                 </ul>
             </div>
-            <h3>Team 17</h3>
+            <h3 class="style_teamplayer">Team 17</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -656,7 +657,7 @@ $('table').tablesorter({
                     <li>List item three</li>
                 </ul>
             </div>
-            <h3>Team 18</h3>
+            <h3 class="style_teamplayer">Team 18</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -664,7 +665,7 @@ $('table').tablesorter({
                     <li>List item three</li>
                 </ul>
             </div>
-            <h3>Team 19</h3>
+            <h3 class="style_teamplayer">Team 19</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -672,7 +673,7 @@ $('table').tablesorter({
                     <li>List item three</li>
                 </ul>
             </div>
-            <h3>Team 20</h3>
+            <h3 class="style_teamplayer">Team 20</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -680,7 +681,7 @@ $('table').tablesorter({
                     <li>List item three</li>
                 </ul>
             </div>
-            <h3>Team 21</h3>
+            <h3 class="style_teamplayer">Team 21</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -688,7 +689,7 @@ $('table').tablesorter({
                     <li>List item three</li>
                 </ul>
             </div>
-            <h3>Team 22</h3>
+            <h3 class="style_teamplayer">Team 22</h3>
             <div>
                 <p>
                     Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
