@@ -198,7 +198,19 @@
     $("#homeall").click(function() {
         $("#bestplayercontent,#pointstablecontent,#matchschedulecontent,#teamscontent,#contactuscontent").show();
     });
+      // sort teams by search filter      
+            
+    $("#searchInput").keyup(function () {
+    var rows = $("#fbody").find("tr").hide();
+    if (this.value.length) {
+    var data = this.value.split(" ");
+    $.each(data, function (i, v) {
+    rows.filter(":contains('" + v + "')").show();
+    });
+    } else rows.show();
+     });
 });
+             
 
 $(function() {
     $("#accordion,#accordion1").accordion();
@@ -229,52 +241,13 @@ $('table')
     });
 
 
-$('table').tablesorter({
 
-    // *** APPEARANCE ***
-    // Add a theme - try 'blackice', 'blue', 'dark', 'default'
-    theme: 'blue',
+             
 
-    // fix the column widths
-    widthFixed: true,
-
-    // include zebra and any other widgets, options:
-    // 'columns', 'filter', 'stickyHeaders' & 'resizable'
-    // 'uitheme' is another widget, but requires loading
-    // a different skin and a jQuery UI theme.
-    widgets: ['zebra', 'filter'],
-
-    widgetOptions: {
-        zebra: [
-            "ui-widget-content even",
-            "ui-state-default odd"
-        ],
-        uitheme: 'jui',
-        columns: [
-            "primary",
-            "secondary",
-            "tertiary"
-        ],
-        columns_tfoot: true,
-        columns_thead: true,
-        filter_childRows: false,
-        filter_columnFilters: true,
-        filter_cssFilter: "tablesorter-filter",
-        filter_functions: null,
-        filter_hideFilters: false,
-        filter_ignoreCase: true,
-        filter_reset: null,
-        filter_searchDelay: 300,
-        filter_startsWith: false,   
-        filter_useParsedData: false,
-        resizable: true,
-        saveSort: true,    
-        stickyHeaders: "tablesorter-stickyHeader"
-    }
-});
-   
         </script>
         </head>
+    
+    
     <body>
      <div>
          <div style="width:160px;display:inline;float:left">
@@ -373,77 +346,79 @@ $('table').tablesorter({
 
 <div id="matchschedulecontent" style="margin-bottom:20px">
     <h2>Match Schedule as expected</h2>
+    <input id="searchInput" placeholder="Team name in UPPERCASE to Filter your teams schedule">
+<br/>
     <table class="tablesorter table2">
         <thead>
             <tr>
-                <th style=""> Matches between Teams</th>
+                <th style=""> Matches B/W Teams</th>
                 <th style="padding-right:20px;padding-left:20px"> </th>
                 <th style="padding-right:20px"> </th>
                 <th style="padding-right:20px"> DATE & TIME </th>
                 <th style="padding-right:40px"> Results </th>
             </tr>
         </thead>
-        <tbody style="background-color:lightblue;">
+        <tbody style="background-color:lightblue;" id="fbody">
             <tr>
-                <td style="padding-right:20px" class="tcolor">Lions</td>
+                <td style="padding-right:20px" class="tcolor">LIONS</td>
                 <td style="padding-right:20px"> vs </td>
                 <td class="oddcolor" style="padding-right:20px"> FRIENDS </td>
                 <td style="padding-right:20px"> 07/15/2016 - 3:00pm </td>
                 <td class="bgresult" style="padding-right:40px;"> LIONS WON BY 10 RUNS</td>
             </tr>
             <tr>
-                <td class="tcolor">Lions</td>
+                <td class="tcolor">LIONS</td>
                 <td> vs </td>
                 <td class="oddcolor"> FRIENDS </td>
                 <td> 07/15/2016 - 3:00pm </td>
                 <td> LIONS WON BY 10 RUNS</td>
             </tr>
             <tr>
-                <td class="tcolor">Lions</td>
+                <td class="tcolor">FRIENDS</td>
+                <td> vs </td>
+                <td class="oddcolor"> LIONS </td>
+                <td> 07/15/2016 - 3:00pm </td>
+                <td> LIONS WON BY 10 RUNS</td>
+            </tr>
+            <tr>
+                <td class="tcolor">LIONS</td>
                 <td> vs </td>
                 <td class="oddcolor"> FRIENDS </td>
                 <td> 07/15/2016 - 3:00pm </td>
                 <td> LIONS WON BY 10 RUNS</td>
             </tr>
             <tr>
-                <td class="tcolor">Lions</td>
+                <td class="tcolor">FRIENDS</td>
+                <td> vs </td>
+                <td class="oddcolor"> LIONS </td>
+                <td> 07/15/2016 - 3:00pm </td>
+                <td> LIONS WON BY 10 RUNS</td>
+            </tr>
+            <tr>
+                <td class="tcolor">LIONS</td>
                 <td> vs </td>
                 <td class="oddcolor"> FRIENDS </td>
                 <td> 07/15/2016 - 3:00pm </td>
                 <td> LIONS WON BY 10 RUNS</td>
             </tr>
             <tr>
-                <td class="tcolor">Lions</td>
-                <td> vs </td>
-                <td class="oddcolor"> FRIENDS </td>
-                <td> 07/15/2016 - 3:00pm </td>
-                <td> LIONS WON BY 10 RUNS</td>
-            </tr>
-            <tr>
-                <td class="tcolor">Lions</td>
-                <td> vs </td>
-                <td class="oddcolor"> FRIENDS </td>
-                <td> 07/15/2016 - 3:00pm </td>
-                <td> LIONS WON BY 10 RUNS</td>
-            </tr>
-            <tr>
-                <td class="tcolor">Lions</td>
+                <td class="tcolor">LIONS</td>
                 <td> vs </td>
                 <td class="oddcolor"> FRIENDS </td>
                 <td> 07/15/2016 - 3:00pm </td>
                 <td>not played</td>
             </tr>
             <tr>
-                <td class="tcolor">Lions</td>
+                <td class="tcolor">SUPER POWER</td>
                 <td> vs </td>
                 <td class="oddcolor"> FRIENDS </td>
                 <td> 07/15/2016 - 3:00pm </td>
                 <td> not played</td>
             </tr>
             <tr>
-                <td class="tcolor">Lions</td>
+                <td class="tcolor">FRIENDS</td>
                 <td> vs </td>
-                <td class="oddcolor"> FRIENDS </td>
+                <td class="oddcolor"> SUPER POWER </td>
                 <td> 07/15/2016 - 3:00pm </td>
                 <td> not played</td>
             </tr>
