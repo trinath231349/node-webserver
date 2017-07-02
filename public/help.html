@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="main-contents">
     <head>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js" ></script>
         <meta charset="utf-8">
@@ -21,6 +21,14 @@
         
        
        <style>
+           .main-contents{
+               width: 1200px;
+    align-content: center;
+     position: relative; 
+    margin: 0px 0px 0px 350px;
+    margin: auto;
+
+           }
 table.table1 {
     border-collapse: collapse;
     width: 100%;
@@ -49,6 +57,10 @@ table.table2 th,table.table2 td {
     padding: 8px;
 }
 
+           table.table2 td.tcolor{
+               color:lightgreen
+           }
+           
 table.table2 tr:nth-child(even){background-color: #f2f2f2}
 
 table.table2 th {
@@ -132,7 +144,7 @@ body {margin:0;}
 
 .topnav {
   overflow: hidden;
-  background-color: #333;   
+  background-color: grey;   
    
         
 }
@@ -140,7 +152,7 @@ body {margin:0;}
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: floralwhite;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -362,10 +374,10 @@ $('table').tablesorter({
 </div>    
         <p><a href="https://www.google.com/">Cricket tournament page </a> </p>
         <div style="align:center">
-        <img src="/cric1.jpg" width="390" height="345">
-         <img src="/cric5.jpg" width="390" height="345">
-        <img src="/cric4.jpg" width="420" height="345">
-        <img src="/cric2.jpg" width="358" height="345">
+        <img src="/cric1.jpg" width="380" height="345">
+         <img src="/cric5.jpg" width="380" height="345">
+        <img src="/cric4.jpg" width="410" height="345">
+<!--        <img src="/cric2.jpg" width="358" height="345"> -->
         </div>
         
         <marquee>   
@@ -435,15 +447,15 @@ $('table').tablesorter({
         <table class="tablesorter table2">
     <thead>
         <tr>
-            <th style="padding-right:20px"> Matches between Teams </th>
-            <th style="padding-right:20px">     </th>
+            <th style=""> Matches between Teams</th>
+            <th style="padding-right:20px;padding-left:20px">     </th>
             <th style="padding-right:20px">     </th>
             <th style="padding-right:20px"> DATE & TIME </th>
             <th style="padding-right:40px"> Results </th>
         </tr>
     </thead>
     <tbody>
-        <tr><td style="padding-right:20px">Lions</td><td style="padding-right:20px"> vs </td><td style="padding-right:20px"> FRIENDS </td><td style="padding-right:20px"> 07/15/2016 - 3:00pm </td><td style="padding-right:40px"> LIONS WON BY 10 RUNS</td></tr>
+        <tr><td style="padding-right:20px" class="tcolor">Lions</td><td style="padding-right:20px"> vs </td><td style="padding-right:20px"> FRIENDS </td><td style="padding-right:20px"> 07/15/2016 - 3:00pm </td><td style="padding-right:40px"> LIONS WON BY 10 RUNS</td></tr>
         <tr><td>Lions</td><td> vs </td><td> FRIENDS  </td><td> 07/15/2016 - 3:00pm </td><td> LIONS WON BY 10 RUNS</td></tr>
         <tr><td>Lions</td><td> vs </td><td> FRIENDS </td><td> 07/15/2016 - 3:00pm </td><td> LIONS WON BY 10 RUNS</td></tr>
         <tr><td>Lions</td><td> vs </td><td> FRIENDS </td><td> 07/15/2016 - 3:00pm </td><td> LIONS WON BY 10 RUNS</td></tr>
@@ -692,16 +704,30 @@ $('table').tablesorter({
   </div>
              <h3>Team 22</h3>
   <div>
-         <ul>
-      <li>List item one</li>
-      <li>List item two</li>
-      <li>List item three</li>
+         <p>
+    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+    </p>
+      <ul class="styleteamplayers">
+      <li>Ravi</li>
+      <li>Gopi</li>
+      <li>Trinath</li>
+      <li>Ram</li>
+      <li>Venkat</li>
+      <li>Jayadeep</li>
+      <li>Devendra</li>
+      <li>venkat</li>
+      <li>Jayadeep</li>
+      <li>sushanth</li>
+      <li>naveen</li>      
     </ul>
   </div>
 </div>
             </div>
      
-        
+       <!-- 
                     
         <div class="container1" >
 
@@ -717,7 +743,11 @@ $('table').tablesorter({
                       </div>
                     </div>
         <div>
-            
+         -->   
+       <br><br><br>
+        
+        <div>
+             <h1>Contact us</h1><br>
             <form action="//submit.form" id="" method="post" onsubmit="return ValidateForm(this);">
              
 <script type="text/javascript">
@@ -731,7 +761,7 @@ return true; }
 <table style="width:550px;border:0;" cellpadding="8" cellspacing="0">
       
 <tr> <td>
-     <h1>Contact us</h1><br>
+    
 <label for="Name">Name*:</label>
 </td> <td>
 <input name="Name" type="text" maxlength="60" style="width:250px;" />
@@ -756,6 +786,7 @@ return true; }
 </td> </tr>
 </table>
 </form>
+        
         </div>
          
        
