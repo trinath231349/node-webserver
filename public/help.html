@@ -1,24 +1,395 @@
 <!DOCTYPE html>
 <html class="main-contents">
     <head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js" ></script>
+        
+      
         <meta charset="utf-8">
-        <title>Help Page</title>
-     
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="../cricpage.css">
+<!--      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">-->
        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">  
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">     
-
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slidesjs/3.0/jquery.slides.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<!--        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.3.94/jquery.marquee.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jssor-slider/25.2.0/jssor.slider.min.js"></script>
+        <title>Cric4cause</title>       
+
+         <link rel="icon" href="/images/LOGO_CRIC.ico" />
+     <style>
         
-        
-       
+         .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{
+             background:none;
+            
+         }
+         .ui-accordion .ui-accordion-content{
+             height:300px;
+         }
+     
+         .ui-mobile .ui-page {
+             max-height:1500px !important; 
+             
+         }
+         
+        @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#cssmenu:after,
+#cssmenu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#cssmenu #menu-button {
+  display: none;
+}
+#cssmenu {
+  font-family: Montserrat, sans-serif;
+ // background: white;
+      
+}
+#cssmenu > ul > li {
+  float: left;
+}
+#cssmenu.align-center > ul {
+  font-size: 0;
+  text-align: center;
+}
+#cssmenu.align-center > ul > li {
+  display: inline-block;
+  float: none;
+}
+#cssmenu.align-center ul ul {
+  text-align: left;
+}
+#cssmenu.align-right > ul > li {
+  float: right;
+}
+#cssmenu > ul > li > a {
+  padding: 17px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: red;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#cssmenu > ul > li:hover > a {
+  color: white;
+  background:#F24A4A; 
+ 
+}
+#cssmenu > ul > li.has-sub > a {
+  padding-right: 30px;
+}
+#cssmenu > ul > li.has-sub > a:after {
+  position: absolute;
+  top: 22px;
+  right: 11px;
+  width: 8px;
+  height: 2px;
+  display: block;
+  background: #F24A4A;
+  content: '';
+      border:1px solid green;
+}
+#cssmenu > ul > li.has-sub > a:before {
+  position: absolute;
+  top: 19px;
+  right: 14px;
+  display: block;
+  width: 2px;
+  height: 8px;
+  background: #dddddd;
+  content: '';
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+#cssmenu > ul > li.has-sub:hover > a:before {
+  top: 23px;
+  height: 0;
+}
+#cssmenu ul ul {
+  position: absolute;
+  left: -9999px;
+}
+#cssmenu.align-right ul ul {
+  text-align: right;
+}
+#cssmenu ul ul li {
+  height: 0;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+#cssmenu li:hover > ul {
+  left: auto;
+}
+#cssmenu.align-right li:hover > ul {
+  left: auto;
+  right: 0;
+}
+#cssmenu li:hover > ul > li {
+  height: 35px;
+}
+#cssmenu ul ul ul {
+  margin-left: 100%;
+  top: 0;
+}
+#cssmenu.align-right ul ul ul {
+  margin-left: 0;
+  margin-right: 100%;
+}
+#cssmenu ul ul li a {
+  border-bottom: 1px solid rgba(150, 150, 150, 0.15);
+  padding: 11px 15px;
+  width: 170px;
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  background: #52BE80;
+      border:1px solid green;
+        z-index: 999;
+  
+}
+#cssmenu ul ul li:last-child > a,
+#cssmenu ul ul li.last-item > a {
+  border-bottom: 0;
+}
+#cssmenu ul ul li:hover > a,
+#cssmenu ul ul li a:hover {
+  color: #ffffff;
+}
+#cssmenu ul ul li.has-sub > a:after {
+  position: absolute;
+  top: 16px;
+  right: 11px;
+  width: 8px;
+  height: 2px;
+  display: block;
+  background: #dddddd;
+  content: '';
+}
+#cssmenu.align-right ul ul li.has-sub > a:after {
+  right: auto;
+  left: 11px;
+}
+#cssmenu ul ul li.has-sub > a:before {
+  position: absolute;
+  top: 13px;
+  right: 14px;
+  display: block;
+  width: 2px;
+  height: 8px;
+  background: #dddddd;
+  content: '';
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+#cssmenu.align-right ul ul li.has-sub > a:before {
+  right: auto;
+  left: 14px;
+}
+#cssmenu ul ul > li.has-sub:hover > a:before {
+  top: 17px;
+  height: 0;
+}
+#cssmenu.small-screen {
+  width: 100%;
+}
+#cssmenu.small-screen ul {
+  width: 100%;
+  display: none;
+}
+#cssmenu.small-screen.align-center > ul {
+  text-align: left;
+}
+#cssmenu.small-screen ul li {
+  width: 100%;
+  border-top: 1px solid rgba(120, 120, 120, 0.2);
+}
+#cssmenu.small-screen ul ul li,
+#cssmenu.small-screen li:hover > ul > li {
+  height: auto;
+}
+#cssmenu.small-screen ul li a,
+#cssmenu.small-screen ul ul li a {
+  width: 100%;
+  border-bottom: 0;
+}
+#cssmenu.small-screen > ul > li {
+  float: none;
+}
+#cssmenu.small-screen ul ul li a {
+  padding-left: 25px;
+}
+#cssmenu.small-screen ul ul ul li a {
+  padding-left: 35px;
+}
+#cssmenu.small-screen ul ul li a {
+  color: #dddddd;
+  background: none;
+}
+#cssmenu.small-screen ul ul li:hover > a,
+#cssmenu.small-screen ul ul li.active > a {
+  color: #ffffff;
+}
+#cssmenu.small-screen ul ul,
+#cssmenu.small-screen ul ul ul,
+#cssmenu.small-screen.align-right ul ul {
+  position: relative;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: left;
+}
+#cssmenu.small-screen > ul > li.has-sub > a:after,
+#cssmenu.small-screen > ul > li.has-sub > a:before,
+#cssmenu.small-screen ul ul > li.has-sub > a:after,
+#cssmenu.small-screen ul ul > li.has-sub > a:before {
+  display: none;
+}
+#cssmenu.small-screen #menu-button {
+  display: block;
+  padding: 17px;
+  color: #dddddd;
+  cursor: pointer;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#cssmenu.small-screen #menu-button:after {
+  position: absolute;
+  top: 22px;
+  right: 17px;
+  display: block;
+  height: 4px;
+  width: 20px;
+  border-top: 2px solid #dddddd;
+  border-bottom: 2px solid #dddddd;
+  content: '';
+}
+#cssmenu.small-screen #menu-button:before {
+  position: absolute;
+  top: 16px;
+  right: 17px;
+  display: block;
+  height: 2px;
+  width: 20px;
+  background: #dddddd;
+  content: '';
+}
+#cssmenu.small-screen #menu-button.menu-opened:after {
+  top: 23px;
+  border: 0;
+  height: 2px;
+  width: 15px;
+  background: #ffffff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#cssmenu.small-screen #menu-button.menu-opened:before {
+  top: 23px;
+  background: #ffffff;
+  width: 15px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#cssmenu.small-screen .submenu-button {
+  position: absolute;
+  z-index: 99;
+  right: 0;
+  top: 0;
+  display: block;
+  border-left: 1px solid rgba(120, 120, 120, 0.2);
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+}
+#cssmenu.small-screen .submenu-button.submenu-opened {
+  background: #262626;
+}
+#cssmenu.small-screen ul ul .submenu-button {
+  height: 34px;
+  width: 34px;
+}
+#cssmenu.small-screen .submenu-button:after {
+  position: absolute;
+  top: 22px;
+  right: 19px;
+  width: 8px;
+  height: 2px;
+  display: block;
+  background: #dddddd;
+  content: '';
+}
+#cssmenu.small-screen ul ul .submenu-button:after {
+  top: 15px;
+  right: 13px;
+}
+#cssmenu.small-screen .submenu-button.submenu-opened:after {
+  background: #ffffff;
+}
+#cssmenu.small-screen .submenu-button:before {
+  position: absolute;
+  top: 19px;
+  right: 22px;
+  display: block;
+  width: 2px;
+  height: 8px;
+  background: #dddddd;
+  content: '';
+}
+#cssmenu.small-screen ul ul .submenu-button:before {
+  top: 12px;
+  right: 16px;
+}
+#cssmenu.small-screen .submenu-button.submenu-opened:before {
+  display: none;
+}
+#cssmenu.small-screen.select-list {
+  padding: 5px;
+}</style>
        <style>
-           
+       
                    img {
      max-width: 100%;
      height: auto;
@@ -29,6 +400,7 @@
      position: relative;
      margin: 0px 0px 0px 350px;
      margin: auto;
+     
  }
  table.table1 {
      border-collapse: collapse;
@@ -140,6 +512,7 @@
  }
  body {
      margin: 0;
+    
  }
  .topnav {
      overflow: hidden;
@@ -157,7 +530,7 @@
  }
  .topnav a:hover {
      background-color: #ddd;
-     color: black;
+     color: green;
  }
  .topnav a.active {
      background-color: #71C965;
@@ -169,35 +542,113 @@
                border-style:none;
               border: 1px solid white;
               color: white;
-           }           
+           }       
+           
+/*           slidder css*/
+           
+           #slideshow {
+  margin: 80px auto;
+  position: relative;
+  width: 345px;
+  height: 240px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#slideshow > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+}
+   
+                       @keyframes example {
+       0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+           
+/*           css for gallery*/
+           
+           @import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px/1 'Open Sans', sans-serif;
+  color: #555;
+  background: #e5e5e5;
+}
+
+.gallery {
+  width: 640px;
+  margin: 0 auto;
+  padding: 5px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+}
+
+.gallery > div {
+  position: relative;
+  float: left;
+  padding: 5px;
+}
+
+.gallery > div > img {
+  display: block;
+  width: 200px;
+  transition: .1s transform;
+  transform: translateZ(0); /* hack */
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > img {
+  transform: scale(1.7,1.7);
+  transition: .3s transform;
+}
+
+.cf:before, .cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
+
+h1 {
+  margin: 40px 0;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+}
+           
 </style>
+       <script>
+        $('.menu-toggle').click(function() {
+       $('ul').toggleClass('opening');
+       $(this).toggleClass('open');
+
+})
+
+        </script>
 
          <script>
         $(document).ready(function() {
-    $("#pointstable").click(function() {
-        $("#pointstablecontent").show();
-        $("#matchschedulecontent,#teamscontent,#bestplayercontent,#contactuscontent").hide();
-    });
+             $("#bestplayercontent,#pointstablecontent,#matchschedulecontent,#teamscontent,#contactuscontent,#aboutus,#gallerycontent,#sponsorcontent").hide();
+  
 
-    $("#matchschedule").click(function() {
-        $("#matchschedulecontent").show();
-        $("#pointstablecontent,#teamscontent,#bestplayercontent,#contactuscontent").hide();
-    });
-    $("#teamplayers").click(function() {
-        $("#teamscontent").show();
-        $("#pointstablecontent,#matchschedulecontent,#bestplayercontent,#contactuscontent").hide();
-    });
-    $("#bestplayers").click(function() {
-        $("#bestplayercontent").show();
-        $("#pointstablecontent,#matchschedulecontent,#teamscontent,#contactuscontent").hide();
-    });
-    $("#contactus").click(function() {
-        $("#contactuscontent").show();
-        $("#pointstablecontent,#matchschedulecontent,#teamscontent,#bestplayercontent").hide();
-    });
-    $("#homeall").click(function() {
-        $("#bestplayercontent,#pointstablecontent,#matchschedulecontent,#teamscontent,#contactuscontent").show();
-    });
+ 
       // sort teams by search filter      
             
     $("#searchInput").keyup(function () {
@@ -240,50 +691,316 @@ $('table')
         }
     });
 
-
-
              
 
         </script>
+<!--   menu js -->
+        <script>
+            
+        (function($) {
+
+  $.fn.menumaker = function(options) {
+      
+      var cssmenu = $(this), settings = $.extend({
+        title: "Menu",
+        format: "dropdown",
+        breakpoint: 768,
+        sticky: false
+      }, options);
+
+      return this.each(function() {
+        cssmenu.find('li ul').parent().addClass('has-sub');
+        if (settings.format != 'select') {
+          cssmenu.prepend('<div id="menu-button">' + settings.title + '</div>');
+          $(this).find("#menu-button").on('click', function(){
+            $(this).toggleClass('menu-opened');
+            var mainmenu = $(this).next('ul');
+            if (mainmenu.hasClass('open')) { 
+              mainmenu.hide().removeClass('open');
+            }
+            else {
+              mainmenu.show().addClass('open');
+              if (settings.format === "dropdown") {
+                mainmenu.find('ul').show();
+              }
+            }
+          });
+
+          multiTg = function() {
+            cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+            cssmenu.find('.submenu-button').on('click', function() {
+              $(this).toggleClass('submenu-opened');
+              if ($(this).siblings('ul').hasClass('open')) {
+                $(this).siblings('ul').removeClass('open').hide();
+              }
+              else {
+                $(this).siblings('ul').addClass('open').show();
+              }
+            });
+          };
+
+          if (settings.format === 'multitoggle') multiTg();
+          else cssmenu.addClass('dropdown');
+        }
+
+        else if (settings.format === 'select')
+        {
+          cssmenu.append('<select style="width: 100%"/>').addClass('select-list');
+          var selectList = cssmenu.find('select');
+          selectList.append('<option>' + settings.title + '</option>', {
+                                                         "selected": "selected",
+                                                         "value": ""});
+          cssmenu.find('a').each(function() {
+            var element = $(this), indentation = "";
+            for (i = 1; i < element.parents('ul').length; i++)
+            {
+              indentation += '-';
+            }
+            selectList.append('<option value="' + $(this).attr('href') + '">' + indentation + element.text() + '</option');
+          });
+          selectList.on('change', function() {
+            window.location = $(this).find("option:selected").val();
+          });
+        }
+
+        if (settings.sticky === true) cssmenu.css('position', 'fixed');
+
+        resizeFix = function() {
+          if ($(window).width() > settings.breakpoint) {
+            cssmenu.find('ul').show();
+            cssmenu.removeClass('small-screen');
+            if (settings.format === 'select') {
+              cssmenu.find('select').hide();
+            }
+            else {
+              cssmenu.find("#menu-button").removeClass("menu-opened");
+            }
+          }
+
+          if ($(window).width() <= settings.breakpoint && !cssmenu.hasClass("small-screen")) {
+            cssmenu.find('ul').hide().removeClass('open');
+            cssmenu.addClass('small-screen');
+            if (settings.format === 'select') {
+              cssmenu.find('select').show();
+            }
+          }
+        };
+        resizeFix();
+        return $(window).on('resize', resizeFix);
+
+      });
+  };
+})(jQuery);
+
+            
+            !function(e){e.fn.menumaker=function(n){var s=e(this),t=e.extend({title:"Menu",format:"dropdown",breakpoint:768,sticky:!1},n);return this.each(function(){if(s.find("li ul").parent().addClass("has-sub"),"select"!=t.format)s.prepend('<div id="menu-button">'+t.title+"</div>"),e(this).find("#menu-button").on("click",function(){e(this).toggleClass("menu-opened");var n=e(this).next("ul");n.hasClass("open")?n.hide().removeClass("open"):(n.show().addClass("open"),"dropdown"===t.format&&n.find("ul").show())}),multiTg=function(){s.find(".has-sub").prepend('<span class="submenu-button"></span>'),s.find(".submenu-button").on("click",function(){e(this).toggleClass("submenu-opened"),e(this).siblings("ul").hasClass("open")?e(this).siblings("ul").removeClass("open").hide():e(this).siblings("ul").addClass("open").show()})},"multitoggle"===t.format?multiTg():s.addClass("dropdown");else if("select"===t.format){s.append('<select style="width: 100%"/>').addClass("select-list");var n=s.find("select");n.append("<option>"+t.title+"</option>",{selected:"selected",value:""}),s.find("a").each(function(){console.log(e(this).parents("ul").length);var s=e(this),t="";for(i=1;i<s.parents("ul").length;i++)t+="-";n.append('<option value="'+e(this).attr("href")+'">'+t+s.text()+"</option")}),n.on("change",function(){window.location=e(this).find("option:selected").val()})}return t.sticky===!0&&s.css("position","fixed"),resizeFix=function(){e(window).width()>t.breakpoint&&(s.find("ul").show(),s.removeClass("small-screen"),"select"===t.format&&s.find("select").hide()),e(window).width()<=t.breakpoint&&(s.find("ul").hide().removeClass("open"),s.addClass("small-screen"),"select"===t.format&&s.find("select").show())},resizeFix(),e(window).on("resize",resizeFix)})}}(jQuery);
+
+            
+        </script>
+        <script type="text/javascript">
+            $( function() {
+    $( document ).tooltip();
+  } );
+            
+            
+	$("#cssmenu").menumaker({
+		title: "Menu",
+		format: "multitoggle"
+	});
+      // slider
+            
+            $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+}, 3000);
+   
+            
+         
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+         
+</script>
+       
+        <style>
+           #map {
+        height: 400px;
+        width: 100%;
+       }
+             label {
+    display: inline-block;
+    width: 5em;
+  }
+        </style>
+        
         </head>
     
     
-    <body>
-     <div>
-         <div style="width:160px;display:inline;float:left">
-             <img src="../LOGO_CRIC.PNG" alt="HTML5 Icon" style="width:140px;height:131px;">
-         </div>
-        <div style="width:300px;display:inline">
-            <h1>Cricket league 2017</h1>
-        </div>
-    </div>
-<!--   header menu section-->
-<div class="topnav">
-
-    <div id="homeall"> <a class="active" href="#home">Home | </a>    </div>
-    <div id="pointstable"> <a href="#e">Points Table |</a> </div>
-    <div id="matchschedule"> <a href="#schedule">Match schedule |</a>    </div>
-    <div id="teamplayers"> <a href="#schedule">Teams |</a>    </div>
-    <div id="bestplayers"><a href="#Teams">Best players |</a> </div>
-    <div id="contactus"><a href="#contactus">Contact us </a>    </div>
-    <!--    <a href="#aboutus">About us</a> -->
-</div>
-<marquee><p style="color:#71C965">For any Information regarding Match and schedule contact : venkat - (000-000-0000)</p></marquee>
-<div style="align:center">
-    <img src="../images/cric1.jpg" width="380" height="345">
-    <img src="../images/cric5.jpg" width="380" height="345">
-    <img src="../images/cric4.jpg" width="410" height="345">
-    <!--        <img src="/cric2.jpg" width="358" height="345"> -->
-</div>
-<!--     scrollable content section   -->
-<marquee>
-    
-    <p style="color:orange">Latest Matchs Results Update:-</p>
-    <div style="background-color:#F24A4A ;color:white;font-size:14pxpadding:10px 10px 10px 10px">   Lions team won by 20 runs | Friends team lost by 2 wickets | Sandy team won by 10 runs | Nutmeg team won by 3 wickets | trinath team won by 4 wickets </div>
-
-        </marquee>
+ 
         
-<!--  pointstable section   -->
+        
+    
+    
+<!--   header menu section-->
+<header style=" background-image: url('../images/pic2.jpg');">
+<div id="cssmenu" style="margin-top:20px">
+   
+    <div style="width:160px;display:inline;float:left;">
+          <img src="../images/LOGO_CRIC.jpg" alt="HTML5 Icon" style="width:140px;height:131px;">
+         </div>
+      
+	<ul style="padding-top:20px;">
+       <div>  <div style="font-weight:bold;font-size:30px;padding:20px 0px 20px 10px;color:darkred;display:inline-block"> WELCOME TO NUTMEG LEAGUE 2017</div><span style="display:inline-block;float:right">  <a href="http://www.theweathernetwork.com"><div id="plemx-root"></div> 
+ </a>
+
+</span>
+              <div style="display:inline;padding-left: 14px;"><a href="#" style="width: 115px;height: 25px;padding: 10px;text-align: center;border-radius: 5px;color: white;font-weight: bold;margin-left:30px;animation-name: example;  animation-duration: 4s;-webkit-animation-duration: 4s;animation-iteration-count: infinite; ">Join us & Support</a></div>
+           </div>
+		<li ><a href="#" onclick=" $('#bestplayercontent,#pointstablecontent,#matchschedulecontent,#teamscontent,#contactuscontent,#gallerycontent,#sponsorcontent').hide();
+        $('#slideshow,#contentinfosection,#postercontent').show();"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+         <li><a href="#" onclick=" $('#aboutus').show();        $('#pointstablecontent,#teamscontent,#bestplayercontent,#contactuscontent,#slideshow,#gallerycontent,#sponsorcontent,#matchschedulecontent,#contentinfosection,#postercontent').hide();">About us</a></li>
+		<li>
+			<a href="#">Nutmeg League</a>
+			<ul>
+				               
+				<li>
+					<a href="#" onclick=" $('#matchschedulecontent').show();
+        $('#pointstablecontent,#teamscontent,#bestplayercontent,#contactuscontent,#slideshow,#gallerycontent,#sponsorcontent,#aboutus,#contentinfosection,#postercontent').hide();">Match Schedule</a>
+<!--
+					<ul>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+					</ul>
+-->
+				</li>
+                <li><a href="#" onclick=" $('#pointstablecontent').show();
+        $('#matchschedulecontent,#teamscontent,#bestplayercontent,#contactuscontent,#slideshow,#gallerycontent,#sponsorcontent,#aboutus,#contentinfosection,#postercontent').hide();">Points Table</a></li>
+				<li><a href="#" onclick="$('#teamscontent').show();
+        $('#pointstablecontent,#matchschedulecontent,#bestplayercontent,#contactuscontent,#slideshow,#gallerycontent,#sponsorcontent,#aboutus,#contentinfosection,#postercontent').hide();">Teams</a></li>
+				<li><a href="#" onclick=" $('#bestplayercontent').show();
+        $('#pointstablecontent,#matchschedulecontent,#teamscontent,#contactuscontent,#slideshow,#gallerycontent,#sponsorcontent,#aboutus,#contentinfosection,#postercontent').hide();">Best Players</a></li>
+                
+<!--                <li><a href="#" id="#results">Results</a></li>-->
+			</ul>
+		</li>
+        <li>
+			<a href="#" onclick="$('#sponsorcontent').show();        $('#pointstablecontent,#teamscontent,#bestplayercontent,#contactuscontent,#slideshow,#gallerycontent,#matchschedulecontent,#aboutus,#contentinfosection,#postercontent').hide();">Sponsors</a>
+	
+		</li>
+		<li><a href="#" onclick=" $('#gallerycontent').show();        $('#pointstablecontent,#matchschedulecontent,#teamscontent,#contactuscontent,#slideshow,#sponsorcontent,#bestplayercontent,#aboutus,#contentinfosection,#postercontent').hide();" title="upcoming event" >Gallery</a></li>
+       
+		<li><a href="#" onclick=" $('#contactuscontent').show();
+        $('#pointstablecontent,#matchschedulecontent,#teamscontent,#bestplayercontent,#slideshow,#gallerycontent,#sponsorcontent,#aboutus,#contentinfosection,#postercontent').hide();">Contact </a></li>
+	</ul>
+</div>
+  </header> <body style=" background-image: url('../images/wall18.jpg');">
+<!--     scrollable content section   -->
+        <div style="padding-top:10px">
+                    <marquee  BEHAVIOR=ALTERNATE>      
+                        <div style="background-color:#F24A4A ;color:white;font-size:14px;padding:12px 12px 12px 12px">  For any Information regarding Match and schedule contact : venkat - (860-830-7571). you can see schedule and timing of matches from nutmeg league tab </div>
+                    </marquee>
+            </div>
+        <br>
+        
+
+
+        <div style="width:1200px;margin-bottom:20px;margin-top:10px">
+            
+                 <div id="contentinfosection" style="font-weight:12px;width:545px;align:center;padding:40px 20px 0px 20px;font-weight:bold;float:left; background-image: url('../images/wall6.jpg');align">We are proud to announce the 10th Edition of the Nutmeg League this year. We are trying to raise awarness and support Maailu orphanage <a href="//www.maaillu.in">(www.maaillu.in)</a>. Krishi Development Society NGO <a href="//www.kirds.org">(www.kirds.org)</a> and a local little league. It is all about fun, fitness, sportsmanship and a good reason to help and support organizations that are thriving to create opportunities for next generation. We have more than 350 players and 50 volunteers registered across CT. Please come and join us on the event dates. Please take a moment and visit the websites above to get insigts into activities of those organizations.</div>
+        
+            
+            
+                  <div id="slideshow" style="width:445px;margin:0px;float:left;display:inline">
+                      <div>
+                         <img src="../images/cric1.jpg" style="height:240px;width:445px">
+                   </div>
+                   <div>
+                     <img src="../images/cric5.jpg" style="height:240px;width:445px">
+                   </div>
+                   <div>
+                       <img src="../images/cric5.jpg" style="height:240px;width:445px" >
+                   </div>
+
+                </div>
+                <span style="width:200px;display:inline;float:right" id="postercontent"> <img src="../images/poster_13.jpg" style="height:340px;width:200px" ></span>
+            </div>
+  
+    
+
+<!--   Gallery     -->
+        <div id="gallerycontent">
+            <div>Album l :-  <a href="#" onclick="$('#busnellleaguepics').toggle();"> Teams in Nutmeg league pictures</a> </div><br>
+            <div id="busnellleaguepics" style="display:none">
+            <div id="cp_widget_fcb7b095-d7c3-4623-a52b-f9802e8dc9bc">...</div><script type="text/javascript">
+var cpo = []; cpo["_object"] ="cp_widget_fcb7b095-d7c3-4623-a52b-f9802e8dc9bc"; cpo["_fid"] = "AQPAMC-DOG0I";
+var _cpmp = _cpmp || []; _cpmp.push(cpo);
+(function() { var cp = document.createElement("script"); cp.type = "text/javascript";
+cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
+var c = document.getElementsByTagName("script")[0];
+c.parentNode.insertBefore(cp, c); })(); </script><noscript><span>New Gallery 2017/7/20</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 1280</span><span>height</span><span> 960</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 1280</span><span>height</span><span> 960</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 1600</span><span>height</span><span> 1200</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 1600</span><span>height</span><span> 1200</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 1280</span><span>height</span><span> 960</span></noscript></div>
+<!--            <div>Album l :-  <a href="#" onclick="$('#nutmegleagecaptains').show();">Teams in Nutmeg league pictures</a>          -->    
+            <div>Album 2 :-  <a href="#" onclick="$('#nutmegleagueteamspics').toggle();">Players and Toss in Nutmeg league pictures</a>          
+            </div><br>
+            
+            <div id="nutmegleagueteamspics" style="display:none">
+            <div id="cp_widget_7653f327-ffe5-415d-b880-c9467454d200">...</div><script type="text/javascript">
+var cpo = []; cpo["_object"] ="cp_widget_7653f327-ffe5-415d-b880-c9467454d200"; cpo["_fid"] = "AIKA3DuYNuHL";
+var _cpmp = _cpmp || []; _cpmp.push(cpo);
+(function() { var cp = document.createElement("script"); cp.type = "text/javascript";
+cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
+var c = document.getElementsByTagName("script")[0];
+c.parentNode.insertBefore(cp, c); })(); </script><noscript><span>Nutmeg League 2015</span><span>Lions </span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 960</span><span>height</span><span> 540</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 960</span><span>height</span><span> 720</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 960</span><span>height</span><span> 540</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 1600</span><span>height</span><span> 900</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 960</span><span>height</span><span> 720</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 960</span><span>height</span><span> 720</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 960</span><span>height</span><span> 720</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 960</span><span>height</span><span> 720</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 960</span><span>height</span><span> 540</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 960</span><span>height</span><span> 720</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 960</span><span>height</span><span> 720</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 960</span><span>height</span><span> 720</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 960</span><span>height</span><span> 720</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 960</span><span>height</span><span> 540</span></noscript></div>
+                
+                <div><a href="http://add.eventable.com/events/596e61623839eb003ece5646/596e61640ca8350016ad3625/" class="eventable-link" target="_blank" data-key="596e61623839eb003ece5646" data-event="596e61640ca8350016ad3625" data-style="3">Add to Calendar</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://plugins.eventable.com/eventable.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script', 'eventable-script');</script></div>
+        </div>
+        
+<!--   sponsorscontent     -->
+        <div id="sponsorcontent">
+    <div>
+    <table style="  border-collapse: collapse;width: 100%;MARGIN-BOTTOM:160PX">
+        <tbody>
+            <tr>
+            <th style="width:150px;text-align: left;padding: 8px;background-color:#FFA724;">Event </th>
+            <th style="width:200px;text-align: left;padding: 8px;background-color: #FFA724;">Name       </th>
+            <th style="width:350px;text-align: left;padding: 8px;background-color: #FFA724;">Description      </th>   
+            <th style="width:150px;text-align: left;padding: 8px;background-color: #FFA724;">Location</th>
+            <th style="width:200px;text-align: left;padding: 8px;background-color: #FFA724;">Calender</th>
+                </tr>
+            <tr>
+                <td style="width:150px;align-content:center"><i class="fa fa-bell-o" aria-hidden="true"></i>Cricket</td>
+                <td style="width:200px;align-content:center">Busnell Premier League</td>
+                <td style="width:350px;align-content:center">Promoting maaillu orphanage (www.maaillu.in) and Krishi Development Society NGO (www.kirds.org)</td>
+                <td style="width:150px;align-content:center">Hartford,CT</td>
+                <td style="width:200px;align-content:center">add to calender</td>
+            
+            </tr>
+        
+        </tbody>
+    
+    </table>
+ </div>
+    </div>
+
+<!--        about us -->
+        <div id="aboutus" > will be updated soon..     <div id="map"></div> </div>      
+        
+        <!--  pointstable section   -->
 <div id="pointstablecontent">
     <h2><p>Points Table</p></h2>
 
@@ -346,7 +1063,7 @@ $('table')
 </div>
 <!--     match schedule section   -->
 
-<div id="matchschedulecontent" style="margin-bottom:20px">
+<div id="matchschedulecontent" style="margin-bottom:20px;">
     <h2>Match Schedule as expected</h2>
     <input id="searchInput" placeholder="Team name in UPPERCASE to Filter your teams schedule">
 <br/>
@@ -443,7 +1160,7 @@ $('table')
             </li>
         </ul>
         <div id="tabs-1">
-            <p> "Ravi kolla" highest batting score 320</p>
+            <p> "Ravi challa" highest batting score 320</p>
         </div>
         <div id="tabs-2">
             <p>"trinath highest wickets 22" </p>
@@ -456,24 +1173,26 @@ $('table')
 
 <!--     teamplayer content section   -->
 
-<div id="teamscontent">
+<div id="teamscontent" >
     <h2>Teams & Players Tournament</h2>
-    <div style="max-width:1200px;height:auto;width:auto">
+    <div style="max-width:1200px;width:auto">
         <div id="accordion" style="width:600px;float:left">
-            <h3 class="style_teamplayer">Team 1</h3>
-            <div style="height:270px">
+            <h3 class="style_teamplayer" style="display:none">Team 1</h3>
+            <div style="height: 260px;">
                 <ul class="styleteamplayers">
-                    <li>Ravi</li>
-                    <li>Gopi</li>
-                    <li>Trinath</li>
-                    <li>Ram</li>
-                    <li>Venkat</li>
-                    <li>Jayadeep</li>
-                    <li>Devendra</li>
-                    <li>venkat</li>
-                    <li>Jayadeep</li>
-                    <li>sushanth</li>
-                    <li>naveen</li>
+                    <li>Ravi Chavva</li>
+                    <li>Gopichand Thati (C)(WK)</li>                    
+                    <li>Trinath Puvvada</li>
+                    <li>Naveen</li>
+                    <li>Sumith</li>
+                    <li>Rakesh</li>
+                    <li>Sai</li>
+                    <li>Sushanth Kapuganti</li>
+                    <li>Hema</li>
+                    <li>Karthik</li>
+                    <li>Shiva</li>
+                    <li>Raju</li>
+                    <li>Prem</li>
                 </ul>
                 <p>
                     About team and other stuff
@@ -582,7 +1301,7 @@ $('table')
             </div>
         </div>
         <div id="accordion1"  style="width:600px;float:right">
-            <h3 class="style_teamplayer">Team 12</h3>
+            <h3 class="style_teamplayer" style="display:none">Team 12</h3>
             <div>
                 <ul>
                     <li>List item one</li>
@@ -689,26 +1408,6 @@ $('table')
     </div>
 </div>
 
-<!-- 
-                    
-        <div class="container1" >
-
-                      <div class="marquee-sibling">Latest match updates </div>
-                      <div class="marquee">
-                        <ul class="marquee-content-items">
-                          <li>lion team won by 20 runs</li>
-                          <li>friends team lost by 2 wickets</li>
-                          <li>sandy team won by 10 runs</li>
-                          <li>nutmeg team won by 3 wickets</li>
-                          <li>trinath team won by 4 wickets</li>
-                        </ul>
-                      </div>
-                    </div>
-        <div>
-         -->
-<br>
-<br>
-<br>
 <!--    contactus section    -->
 <div id="contactuscontent">
     <h2>Contact us</h2>
@@ -780,47 +1479,75 @@ $('table')
                     * - required fields
                 </td>
                 <td>
-
                     <input name="skip_Submit" type="submit" value="Submit" />
                     <script src="" type="text/javascript"></script>
                 </td>
             </tr>
         </table>
     </form>
-
 </div>
-
-
-<!--     footer section -->
-
-<section>
-    <div style="margin-top:50px;background-color: #D5D8DC ;">
-      
-        <span style="display:inline-block;margin-left: 125px;font-weight: bold;">©2017. All rights reserved for nutmug cricket association.</span>
-
-        <span style="display:inline-block;margin-left:400px;">
-      <ul   style="list-style-type: none;">
-        <li>
-          <a href="https://www.facebook.com/pages" rel="external" data-tag="footer-nav-click" title="Facebook"><span class="fa fa-facebook-square"></span><span class="sr">Facebook</span></a>
-        </li>
-        <li>
-            <a href="https://twitter.com/" rel="external" data-tag="footer-nav-click" title="Twitter"><span class="fa fa-twitter-square"></span><span class="sr">Twitter</span></a>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/" rel="external" data-tag="footer-nav-click" title="Youtube"><span class="fa fa-youtube-square"></span><span class="sr">Youtube</span></a>
-        </li>
-        <li>
-            <a href="https://plus.google.com/" rel="external" data-tag="footer-nav-click" title="Google Plus"><span class="fa fa-google-plus-square"></span><span class="sr">Google Plus</span></a>
-        </li>
-        </ul>
+<div style="width:400px;padding-left:20px"><h3>Indiviual Sponsors :</h3><marquee direction=up style="color:red;font-weight:bold" scrollamount="2">
+    <div> Trinath puvvada </div>
+    <div> Gopi </div>
+    <div> Ravi </div>
+    <div> Venkat </div>
+    <div> Ram </div>
+    <div> Jayadeep </div>
+    </marquee>
+        
+        </div>        
+        
+     
+        
+    
+        
+<!--    sponsor section    -->
+<div style="font-size:22px;font-weight:bold;padding-left:10px"> Event Sponsors :</div>        
+<marquee>      
+<div >
+    
+    <img src="../images/eminent.png" width="150" height="100" style="padding-right:10px;">
+    <img src="../images/niktor.png" width="150" height="100" style="padding-right:10px;">
+   <img src="../images/Friends_logo1.jpg" width="150" height="100" style="padding-right:10px;">
+    <img src="../images/lions_logo1.png" width="150" height="100" style="padding-right:10px;">
+          
+</div>
+</marquee>  
+        
+<!--   sponsor ending     -->
+        <span> <a href="https://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">
+<!--
+By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at https://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at https://www.accuweather.com/en/privacy.
+-->
+</a><div id="awcc1500430102173" class="aw-widget-current"  data-locationkey="" data-unit="f" data-language="en-us" data-useip="true" data-uid="awcc1500430102173"></div><script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script>
+   </span>
+        
+        <!--     footer section -->
+<footer>
+    <div style="background:#F24A4A;border-radius:10px;padding:10px 10px 10px 10px">      
+        <span style="color:white;padding-left:10px;font-size:14px;padding-top:15px"> copyrights© cric4cause.com 2017 All rights Reserved</span> 
+        <!-- hitwebcounter Code START -->
+        <span style="align:center;padding-left:200px">
+                <a href="http://www.hitwebcounter.com" target="_blank">
+                <img src="http://hitwebcounter.com/counter/counter.php?page=6710534&style=0002&nbdigits=6&type=page&initCount=0" title="install tracking codes" Alt="install tracking codes"   border="0" >
+                </a>                                    
+                                        <!-- hitwebcounter.com -->  
+        </span>        
+        
+        <span style="padding-left:310px">
+            <span><a href="https://www.facebook.com/pages" rel="external" data-tag="footer-nav-click" title="Facebook"><span class="fa fa-facebook-square" style="color:greenyellow;font-size:22px"></span>Follow us at facebook</a></span>
+                <span><a href="https://twitter.com/" rel="external" data-tag="footer-nav-click" title="Twitter"><span class="fa fa-twitter-square" style="color:greenyellow;font-size:22px"></span></a></span>
+                       <span> <a href="https://twitter.com/" rel="external" data-tag="footer-nav-click" title="Twitter"><span class="fa fa-twitter-square" style="color:greenyellow;font-size:22px"></span></a>
+                </span>
+                   <span>  <a href="https://plus.google.com/" rel="external" data-tag="footer-nav-click" title="Google Plus"><span class="fa fa-google-plus-square" style="color:greenyellow;font-size:22px"></span></a>
+                </span>            
+            
         </span>
-
+                            
+<!-- End of SimpleHitCounter Code -->
 
     </div>
-</section>
-    </body>
-    <br><br>
-    
-
+</footer>
+    </body>  
 
 </html>
